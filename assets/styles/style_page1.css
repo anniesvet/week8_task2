@@ -1,0 +1,257 @@
+*,
+* ::before,
+* ::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+#body {
+    display: grid;
+    grid-template-columns: 0.9fr 1fr;
+    grid-template-rows: 0.4fr 3fr 0.5fr;
+    grid-template-areas:
+        "hd hd"
+        "mn section"
+        "ft section";
+}
+
+#header {
+    grid-area: hd;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 3vh 5vw 3vh 5vw;
+}
+
+.logo__img {
+    width: 200px;
+    height: 40px;
+}
+
+.button {
+    font-family: 'Intro Demo Black CAPS', Times, serif;
+    font-size: 13px;
+
+    background-color: #5222D0;
+    color: white;
+    border-radius: 100px;
+    border: none;
+}
+
+.button:active {
+    color: black;
+    background-color: rgb(194, 194, 194);
+}
+
+.logo__button {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 120px;
+    height: 40px;
+}
+
+.logo__bag {
+    margin-left: 5px;
+
+    width: 15px;
+    height: 15px;
+}
+
+#main {
+    margin-top: 10vh;
+    padding-left: 3.5vw;
+}
+
+#section {
+    grid-area: section;
+}
+
+.information {
+    display: flex;
+    flex-direction: column;
+
+    padding-left: 3.5vw;
+}
+
+.information__title {
+    margin-bottom: 12px;
+    margin-top: 0;
+
+    font-family: 'Intro Demo Black CAPS', Times, serif;
+    font-size: 64px;
+    line-height: 72px;
+}
+
+.information__text {
+    margin-bottom: 30px;
+    margin-top: 0;
+
+    font-family: 'Roboto Slab', serif;
+    font-size: 22px;
+    line-height: 32px;
+}
+
+.information__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 270px;
+    height: 84px;
+
+    font-size: 35px;
+    line-height: 35px;
+}
+
+.information__buy {
+    width: 40px;
+    height: 30px;
+
+    margin-left: 15px;
+}
+
+.pic__main {
+    max-width: 100%;
+}
+
+#footer {
+    grid-area: ft;
+
+    margin-top: 30px;
+    padding-left: 7vw;
+}
+
+.footer__nav {
+    display: flex;
+    flex-direction: row;
+}
+
+.footer__link:hover {
+    text-decoration: underline;
+}
+
+.footer__link {
+    margin-right: 34px;
+
+    font-family: 'Roboto Slab', serif;
+    font-size: 20px;
+
+    color: #5222D0;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 699px) {
+
+    #body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #footer {
+        margin-bottom: 30px;
+        padding-left: 7vw;
+    }
+
+    .footer__link {
+        margin-right: 34px;
+
+        font-family: 'Roboto Slab', serif;
+        font-size: 18px;
+
+        color: #5222D0;
+        text-decoration: none;
+    }
+
+    .information__title {
+        margin-bottom: 12px;
+        margin-top: 0;
+
+        font-family: 'Intro Demo Black CAPS', Times, serif;
+        font-size: 58px;
+        line-height: 72px;
+    }
+
+    .information__text {
+        margin-bottom: 30px;
+        margin-top: 0;
+
+        font-family: 'Roboto Slab', serif;
+        font-size: 20px;
+        line-height: 32px;
+    }
+
+    .information__button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        margin-bottom: 35px;
+
+        width: 250px;
+        height: 75px;
+
+        font-size: 35px;
+        line-height: 35px;
+    }
+
+    .information__buy {
+        width: 40px;
+        height: 30px;
+
+        margin-left: 15px;
+    }
+
+}
+
+@media screen and (min-width: 700px) and (max-width: 1025px) {
+
+    #body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .information__button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        margin-bottom: 50px;
+
+        width: 250px;
+        height: 75px;
+
+        font-size: 35px;
+        line-height: 35px;
+    }
+
+    .information__buy {
+        width: 40px;
+        height: 30px;
+
+        margin-left: 15px;
+    }
+
+    #footer {
+        margin-bottom: 50px;
+        padding-left: 7vw;
+    }
+
+    .footer__link {
+        margin-right: 34px;
+
+        font-family: 'Roboto Slab', serif;
+        font-size: 20px;
+
+        color: #5222D0;
+        text-decoration: none;
+    }
+
+}

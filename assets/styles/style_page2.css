@@ -1,0 +1,261 @@
+*,
+* ::before,
+* ::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+#body {
+    display: flex;
+    flex-direction: column;
+
+    padding: 5vh 5vw 5vh 5vw;
+}
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo__img {
+    width: 200px;
+    height: 40px;
+}
+
+.button {
+    font-family: 'Intro Demo Black CAPS', Times, serif;
+    font-size: 13px;
+
+    background-color: #5222D0;
+    color: white;
+    border-radius: 100px;
+    border: none;
+}
+
+.button:active {
+    color: black;
+    background-color: rgb(194, 194, 194);
+}
+
+.logo__button {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 120px;
+    height: 40px;
+}
+
+.logo__bag {
+    margin-left: 5px;
+
+    width: 15px;
+    height: 15px;
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+
+    padding-left: 3.5vw;
+    margin-top: 7vh;
+}
+
+.title {
+    grid-area: title;
+
+    font-family: 'Intro Demo Black CAPS', Times, serif;
+    font-size: 57px;
+    font-weight: 900;
+}
+
+.container {
+    grid-area: container;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    grid-template-rows: 1fr 0.5fr;
+    grid-gap: 71px;
+
+    margin-top: 2vh;
+}
+
+.opportunity {
+    display: flex;
+    flex-direction: column;
+}
+
+.oportunity__title,
+.subscription__title {
+    font-family: 'Intro Demo Black CAPS', Times, serif;
+    font-size: 30px;
+    line-height: 36px;
+
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.subscription__title {
+    color: white;
+}
+
+.opportunity__image {
+    max-width: 100%;
+}
+
+.oportunity__text,
+.subscription__text {
+    font-family: 'Roboto Slab', serif;
+    font-size: 20px;
+    line-height: 30px;
+
+    margin: 0;
+}
+
+.subscription {
+    display: flex;
+    flex-direction: column;
+
+    padding-left: 5%;
+
+    height: 27vh;
+    background-color: #EC615B;
+}
+
+.subscription__input {
+    margin-bottom: 7%;
+    padding-left: 5%;
+
+    width: 330px;
+    height: 50px;
+
+    font-family: 'Roboto Slab', serif;
+    font-size: 20px;
+}
+
+.subscription__button {
+    width: 140px;
+    height: 40px;
+}
+
+#footer {
+    margin-top: 10vh;
+    margin-bottom: 4vh;
+    padding-left: 3.5vw;
+}
+
+.footer__nav {
+    display: flex;
+    flex-direction: row;
+}
+
+.footer__link:hover {
+    text-decoration: underline;
+}
+
+.footer__link {
+    margin-right: 34px;
+
+    font-family: 'Roboto Slab', serif;
+    font-size: 20px;
+
+    text-decoration: none;
+    color: black;
+}
+
+@media screen and (max-width: 767px) {
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr) repeat (3, 0.5fr);
+
+        grid-gap: 30px;
+    }
+
+    .opportunity {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .subscription {
+        display: flex;
+        flex-direction: column;
+
+        margin-top: 30px;
+        padding-left: 5%;
+
+        height: 40vh;
+        background-color: #EC615B;
+    }
+
+    .subscription__input {
+        margin-bottom: 4%;
+        padding-left: 5%;
+
+        width: 330px;
+        height: 50px;
+
+        font-family: 'Roboto Slab', serif;
+        font-size: 20px;
+    }
+
+    .subscription__button {
+        width: 140px;
+        height: 40px;
+    }
+
+    .footer__link {
+        margin-right: 20px;
+
+        font-family: 'Roboto Slab', serif;
+        font-size: 15px;
+
+        text-decoration: none;
+        color: black;
+    }
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1025px) {
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr) repeat (3, 0.5fr);
+
+        grid-gap: 30px;
+    }
+
+    .subscription {
+        display: flex;
+        flex-direction: column;
+
+        margin-top: 30px;
+        padding-left: 5%;
+
+        height: 45vh;
+        background-color: #EC615B;
+    }
+
+    .subscription__input {
+        margin-bottom: 4%;
+        padding-left: 5%;
+
+        width: 330px;
+        height: 50px;
+
+        font-family: 'Roboto Slab', serif;
+        font-size: 20px;
+    }
+
+    .subscription__button {
+        width: 140px;
+        height: 40px;
+    }
+}
